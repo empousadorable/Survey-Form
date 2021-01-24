@@ -6,10 +6,115 @@
 		<title>Survey Form</title>
 		<link rel="stylesheet" href="assets/css/style.css" />
 	</head>
+
+	<!--body-->
+
 	<body>
 		<main id="main">
 			<h1 id="title">Survey Form</h1>
-			<p id="description">Crocodile Hunter. Wildlife Warrior</p>
-			<form id="survey-form"></form>
+			<p id="description">A survey to rate user experience</p>
+
+			<!--Form-->
+
+			<form id="survey-form">
+				<!--Name-->
+
+				<div class="form-group">
+					<label id="name-label" for="name">Name</label>
+					<input
+						type="text"
+						name="name"
+						id="name"
+						class="form-control"
+						placeholder="Enter your name"
+						required
+					/>
+				</div>
+
+				<!--Email-->
+
+				<div class="form-group">
+					<label id="email-label" for="email">Email</label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						class="form-control"
+						placeholder="Enter your email"
+						required
+					/>
+				</div>
+
+				<!--Age-->
+
+				<div class="form-group">
+					<label id="number-label" for="age"
+						>Age<span class="optional">(optional)</span></label
+					>
+					<input
+						type="number"
+						name="age"
+						id="number"
+						min="18"
+						max="99"
+						class="form-control"
+						placeholder="Age"
+					/>
+				</div>
+
+				<!--Favorite Pet-->
+
+				<div class="form-group">
+					<p>Choose your favorite type of pet</p>
+					<select id="dropdown" name="pet" class="form-control" required>
+						<option disabled selected value>Please make a selection</option>
+						<option value="dog">Dog</option>
+						<option value="cat">Cat</option>
+						<option value="fish">Fish</option>
+						<option value="rabbit">Rabbit</option>
+						<option value="other">None of the above</option>
+					</select>
+				</div>
+
+				<!--Dog Opinion-->
+
+				<div class="form-group">
+					<p>Do you like dogs?</p>
+					<label>
+						<input
+							name="dog-opinion"
+							value="definitely"
+							type="radio"
+							class="input-radio"
+							checked
+						/>Definitely
+					</label>
+					<label>
+						<input
+							name="dog-opinion"
+							value="kind-of"
+							type="radio"
+							class="input-radio"
+						/>Kind-of
+					</label>
+					<label>
+						<input
+							name="dog-opinion"
+							value="not-really"
+							type="radio"
+							class="input-radio"
+						/>Not really
+					</label>
+					<label>
+						<input
+							name="dog-opinion"
+							value="definitely-not"
+							type="radio"
+							class="input-radio"
+						/>Definitely not
+					</label>
+				</div>
+			</form>
+		</main>
 	</body>
 </html>
